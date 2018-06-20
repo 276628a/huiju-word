@@ -1,0 +1,23 @@
+[
+	{
+		"recordId": {
+			"pointcoinAddress": "UPfkSqfbSbNcioAMUtcq2mMYqf2cxw38XAv",
+			"txId": "4b7b904159af290e7d0df476893407e8a8ddce49c0c289ceeeb7527b48fc4431",
+			"memberId": "22837173-67cc-49ae-a246-9b5d5e462f6c"
+		},
+		"amount": 0.23120000,
+		"createdDate": "2017-03-22T01:57Z[Etc/UTC]",
+		"createdBy": "anonymousUser",
+		"txTime": "2017-03-22T01:55Z[Etc/UTC]",
+		"modifiedDate": "2017-03-22T01:57Z[Etc/UTC]",
+		"modifiedBy": "anonymousUser",
+		"currency": "XPP",
+		"confirmations": 1,
+		"version": 0,
+		"txReceivedTime": "2017-03-22T01:55Z[Etc/UTC]",
+		"syncStatus": {
+			"syncedWithMember": false
+		}
+	}
+]
+ 

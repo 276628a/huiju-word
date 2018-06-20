@@ -1,0 +1,13 @@
+接口访问文档：
+
+IP及端口：http://119.23.55.114:9090/app
+
+访问有权限控制：在http协议的头header里面设置，如：
+
+headers: {
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*'，
+  'Authorization', '12345678'
+}
+
+也就是说必须设定： 'Authorization', '12345678'

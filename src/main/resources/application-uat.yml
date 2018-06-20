@@ -1,0 +1,45 @@
+spring:
+  datasource :  
+    type : com.alibaba.druid.pool.DruidDataSource
+    url : jdbc:mysql://47.106.141.210:3306/cosmetics?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    urlSpy : jdbc:p6spy:mysql://47.106.141.210:3306/cosmetics?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false     
+    username : root
+    password : Lg123123
+    driverClassName : com.mysql.jdbc.Driver
+    driverClassNameSpy : com.p6spy.engine.spy.P6SpyDriver
+    initialSize : 5
+    minIdle : 5
+    maxActive : 20
+    maxWait : 60000
+    timeBetweenEvictionRunsMillis : 60000
+    minEvictableIdleTimeMillis : 300000
+    validationQuery : SELECT 1 FROM DUAL
+    testWhileIdle : true
+    testOnBorrow : false
+    testOnReturn : false 
+    poolPreparedStatements : true
+    maxPoolPreparedStatementPerConnectionSize : 20
+    filters : stat,wall,log4j
+    connectionProperties : druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000         
+    useGlobalDataSourceStat : true  
+    isSpy : false  
+    jpa:
+      show-sql : true    
+      properties:
+        hibernate:
+          format_sql : false
+          hibernate: 
+            use_sql_comments : false
+  redis:
+    database : 0
+    host : 47.106.141.210
+    password : Lg13192229256.Q
+    port : 6379      
+    timeout : 0
+    pool : 
+      max-active : 300
+      max-wait : 1000
+      max-idle : 8 
+      min-idle : 0
+       
+

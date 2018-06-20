@@ -1,0 +1,59 @@
+spring:
+  profiles:
+    active : uat
+  application :
+    name : cosmetics-core
+  jackson : 
+    date-format : yyyy-MM-dd HH:mm:ss       
+    time-zone : GMT+8
+
+aliyun:
+  singleSendSms:
+    active : true   
+    host : http://dysmsapi.aliyuncs.com/singleSendSms
+    appKey : LTAIS8K19Olh1u9P
+    appSecret : ZrZU6rX9n125povo31lJwU9DG7hVZo
+    appCode : 0fffc535a74748288c11fc9a83b615f1
+    freeSignName : 我的钱仓
+
+
+server:
+  port : 9090
+  
+multipart:
+  enabled : true
+  
+logging:
+  config: classpath:logback.xml  
+  path: /var/log
+  file : ${spring.application.name}.log
+  level: INFO  
+
+member:
+  right:
+    app:
+      url:
+        checked : 
+            /api/order/*
+          , /api/shopping/*
+          , /api/receive-address/*
+          , /api/member/childen/view
+          , /api/weixin/pay
+    console:
+      url:
+        nochecked : 
+            /**/login
+          , /system/verifyCode/**
+---      
+upload :
+  image :
+    path: /opt/cosmetics/cosmetics-console/pages/image
+
+web:
+  server:   
+    img : http://admin.myqiancang.com   
+    used : 
+        http://admin.myqiancang.com/
+      , https://admin.myqiancang.com/
+      , http://myqiancang.u0762.com/
+      , http://localhost:8080/

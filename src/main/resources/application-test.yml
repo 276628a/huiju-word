@@ -1,0 +1,42 @@
+spring:
+  datasource :  
+    type : com.alibaba.druid.pool.DruidDataSource
+    url : jdbc:mysql://127.0.0.1:3306/cosmetics?characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username : root
+    password : 123456
+    driverClassName : com.mysql.jdbc.Driver
+    driverClassNameSpy : com.p6spy.engine.spy.P6SpyDriver
+    initialSize : 5
+    minIdle : 5
+    maxActive : 20
+    maxWait : 60000
+    timeBetweenEvictionRunsMillis : 60000
+    minEvictableIdleTimeMillis : 300000
+    validationQuery : SELECT 1 FROM DUAL
+    testWhileIdle : true
+    testOnBorrow : false
+    testOnReturn : false 
+    poolPreparedStatements : true
+    maxPoolPreparedStatementPerConnectionSize : 20
+    filters : stat,wall,log4j
+    connectionProperties : druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000         
+    useGlobalDataSourceStat : true
+  redis:
+     database : 0
+     host : 127.0.0.1
+     password : 123456
+     port : 6379      
+     timeout : 1000
+     pool :  
+       max-active : 300
+       max-wait : 10000
+       max-idle : 8 
+       min-idle : 0
+
+upload :
+  image :
+    path: E:\\project\\cosmetics\\cosmetics-console\\src\\pages\\image
+    
+web:
+  server:   
+    img : http://localhost:8080/pages/image

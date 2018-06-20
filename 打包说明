@@ -1,0 +1,16 @@
+在Goals中输入：org.apache.maven.plugins:maven-jar-plugin:2.4:jar org.springframework.boot:spring-boot-maven-plugin:1.0.1.RELEASE:repackage
+
+
+<plugin>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
+	<configuration>
+		<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>
+		<fork>true</fork><!-- 如果没有该项配置，可能devtools不会起作用 -->
+ 
+            <mainClass>com.neza.cosmetics.CosmeticCoreApp</mainClass><!-- 入口程序 -->  
+          <!--   <addClasspath>true</addClasspath> 
+            <classpathPrefix>lib/</classpathPrefix>   -->
+       
+	</configuration>
+</plugin>
