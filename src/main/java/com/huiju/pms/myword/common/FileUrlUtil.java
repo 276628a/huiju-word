@@ -7,9 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+ 
 
 public class FileUrlUtil {
 	private static final Log log = LogFactory.getLog(FileUrlUtil.class);

@@ -8,8 +8,6 @@ If args.Count = 3 Then
     word2= WScript.Arguments(1)    
     word3= WScript.Arguments(2) 
  
-
-
 Set ObjWD=CreateObject("Word.application")
 
 Set ObjDOC=ObjWD.Documents.Open(word1)
